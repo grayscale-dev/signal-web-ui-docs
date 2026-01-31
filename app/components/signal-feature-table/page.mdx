@@ -1,0 +1,48 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-feature-table'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-feature-table
+
+<LiveExample tag="signal-feature-table" />
+
+Feature-rich table with search, sorting, filtering, selection, and pagination.
+
+## Props
+
+- `columns: &#123; key: string; header: string; sortable?: boolean; align?: "left" | "center" | "right"; width?: string; render?: (row) =&gt; Renderable &#125;[]`
+- `rows: Record&lt;string, unknown&gt;[]`
+- `caption?: string`
+- `rowKey?: string | (row) =&gt; string`
+- `searchable?: boolean`
+- `filterable?: boolean`
+- `filters?: &#123; key: string; label: string; options: &#123; value: string; label: string &#125;[]; value?: string &#125;[]`
+- `selectable?: boolean`
+- `selectedKeys?: string[]`
+- `pagination?: &#123; pageIndex: number; pageSize: number; total?: number &#125;`
+- `emptyText?: string`
+- `loading?: boolean`
+
+## Events
+
+- `rowClick` — `&#123; row &#125;`
+- `selectionChanged` — `&#123; keys: string[] &#125;`
+- `sortChange` — `&#123; sort?: &#123; key: string; direction: "asc" | "desc" &#125; &#125;`
+- `filterChange` — `&#123; filters: Record&lt;string, string&gt; &#125;`
+- `searchChange` — `&#123; query: string &#125;`
+- `pageChange` — `&#123; pageIndex: number; pageSize: number &#125;`
+
+## Slots
+
+- `header-&#123;key&#125;` — override header cell
+- `cell-&#123;key&#125;` — override body cell
+- `actions-header` — header for actions column
+- `row-actions` — per-row actions slot
+- `empty` — empty state
+- `loading` — loading state
+
+</div>

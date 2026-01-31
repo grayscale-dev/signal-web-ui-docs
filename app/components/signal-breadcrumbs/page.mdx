@@ -1,0 +1,30 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-breadcrumbs'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-breadcrumbs
+
+<LiveExample tag="signal-breadcrumbs" />
+
+Breadcrumb navigation trail with truncation support.
+
+## Usage
+```html
+<signal-breadcrumbs .items=${[{ id: 'home', label: 'Home' }, { id: 'page', label: 'Page' }]}></signal-breadcrumbs>
+```
+
+## Props
+- `items` array `&#123; id, label, href? &#125;`
+- `maxItems` number (to collapse in the middle)
+
+## Events
+- `navigate` → `&#123; id: string &#125;`
+
+## Slots
+- default: not used (items come from props).
+
+</div>

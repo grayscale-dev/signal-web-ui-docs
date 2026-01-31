@@ -1,0 +1,28 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-snackbar'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-snackbar
+
+<LiveExample tag="signal-snackbar" />
+
+Transient notification bar.
+
+## Props
+
+- `message: string`
+- `tone?: "info" | "success" | "warning" | "danger"` (default `"info"`)
+- `duration?: number` (default `4000`)
+- `actionLabel?: string`
+- `open?: boolean`
+
+## Events
+
+- `action` — when action clicked
+- `dismiss` — when closed/auto-dismissed
+
+</div>

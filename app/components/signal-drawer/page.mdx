@@ -1,0 +1,46 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-drawer'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-drawer
+
+<LiveExample tag="signal-drawer" />
+
+Edge-anchored sliding panel with backdrop dismissal and optional snap points for mobile-like behavior.
+
+## When to use
+- Secondary surfaces such as filters, details, or settings.
+- Temporary navigation from the side.
+
+## Usage
+```html
+<signal-drawer open side="right" heading="Filters">
+  <p>Drawer body goes here.</p>
+</signal-drawer>
+```
+
+## Props
+- `open` (boolean): controls visibility.
+- `side` ("left" | "right" | "top" | "bottom") default `right`.
+- `heading` / `description`: text for header.
+- `size` (number|string): width (left/right) or height (top/bottom); numbers are px. Default `420`.
+- `snapPoints` (number[]): for top/bottom, values 0-1 multiply viewport height; first value used.
+- `defaultSnap` (number): fallback snap when `snapPoints` empty; default `0.5`.
+- `dismissOnBackdrop` (boolean): click backdrop to close; default `true`.
+- `dismissible` (boolean): if false, drawer cannot be closed by user; default `true`.
+
+## Events
+- `openChange` → `&#123; open: boolean &#125;` when `open` changes.
+- `close` → `void` when dismissed.
+
+## Slots
+- default: drawer content.
+
+## Accessibility
+- Uses `role="dialog"` and keeps focus within the drawer while open. Backdrop is `aria-hidden`.
+
+</div>

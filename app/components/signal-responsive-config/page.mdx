@@ -1,0 +1,36 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-responsive-config'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-responsive-config
+
+<LiveExample tag="signal-responsive-config" />
+
+Provides breakpoint and z-index scales as CSS custom properties for any nested content.
+
+## Usage
+```html
+<signal-responsive-config
+  .breakpoints=${{ sm: 640, md: 768, lg: 1024 }}
+  .zIndexScale=${{ overlay: 1000, toast: 1100 }}
+>
+  <!-- children that read CSS vars -->
+</signal-responsive-config>
+```
+
+## Props
+- `breakpoints` Record&lt;string, number&gt;: creates `--bp-&#123;key&#125;` variables (px values).
+- `zIndexScale` Record&lt;string, number&gt;: creates `--z-&#123;key&#125;` variables.
+- `hostClass` string: forwarded to the inner wrapper.
+
+## Events
+None.
+
+## Slots
+- default: content.
+
+</div>

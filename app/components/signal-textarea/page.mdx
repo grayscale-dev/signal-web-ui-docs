@@ -1,0 +1,36 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-textarea'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-textarea
+
+<LiveExample tag="signal-textarea" />
+
+Multiline text input with auto-resize option.
+
+## Usage
+```html
+<signal-textarea rows="4" placeholder="Enter notes"></signal-textarea>
+```
+
+## Props
+- `value` string
+- `defaultValue` string
+- `rows` number
+- `autoResize` boolean
+- `maxLength` number
+- `placeholder` string
+- `disabled` boolean
+- `validationState` string
+
+## Events
+- `valueChange` → `&#123; value: string &#125;`
+
+## Slots
+- default: not used
+
+</div>

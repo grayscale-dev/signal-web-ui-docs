@@ -1,0 +1,35 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-slider'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-slider
+
+<LiveExample tag="signal-slider" />
+
+Single or range slider for numeric input.
+
+## Usage
+```html
+<signal-slider value="50" min="0" max="100" step="1"></signal-slider>
+```
+
+## Props
+- `value` number | [number, number]
+- `min` number
+- `max` number
+- `step` number
+- `mode` "single" | "range"
+- `showValue` boolean
+- `disabled` boolean
+
+## Events
+- `valueChange` → `&#123; value: number | [number, number] &#125;`
+
+## Slots
+- default: not used
+
+</div>

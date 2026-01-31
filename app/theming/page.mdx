@@ -1,0 +1,32 @@
+export const metadata = {
+  title: 'Theming'
+};
+
+<div className="prose-signal space-y-6">
+
+# Theming
+
+Signal Web UI themes are driven by a `data-signal-theme` attribute and a suite of CSS variables. This makes it easy to swap themes at runtime or scope them to a specific container.
+
+```html
+<body data-signal-theme="indigo">
+  <signal-data-table></signal-data-table>
+</body>
+```
+
+## Token examples
+
+```css
+:root {
+  --signal-color-primary: #4c67ff;
+  --signal-color-surface: #0f172a;
+  --signal-radius-md: 12px;
+}
+```
+
+## Tips
+
+- Scope theme overrides to a container for per-section customization.
+- Use `--signal-*` variables for fine-grained control over colors, spacing, and typography.
+
+</div>

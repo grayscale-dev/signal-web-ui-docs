@@ -1,0 +1,24 @@
+export const metadata = {
+  title: 'React Wrapper'
+};
+
+<div className="prose-signal space-y-6">
+
+# React wrapper
+
+Use `@signal-web-ui/react` to consume Signal Web UI components in React with proper typings and event handling.
+
+```tsx
+import { SignalButton } from '@signal-web-ui/react';
+
+export default function Example() {
+  return <SignalButton variant="primary">Save</SignalButton>;
+}
+```
+
+## Notes
+
+- Ensure the core custom elements are registered via the loader.
+- Wrapper components forward props and custom events in a React-friendly way.
+
+</div>

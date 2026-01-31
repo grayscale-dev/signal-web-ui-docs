@@ -1,0 +1,41 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-accessibility-helpers'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-accessibility-helpers
+
+<LiveExample tag="signal-accessibility-helpers" />
+
+Utility wrapper providing keyboard shortcuts, focus-visible toggle, and optional focus trap.
+
+## Usage
+```html
+<signal-accessibility-helpers
+  focus-visible
+  trap-focus
+  return-focus
+  .shortcutMap=${{ "cmd+k": "palette", "shift+?": "help" }}
+  onShortcut={(e) => console.log(e.detail.combo)}
+>
+  <!-- content -->
+</signal-accessibility-helpers>
+```
+
+## Props
+- `focusVisible` boolean (default `true`): sets `data-focus-visible` on `&lt;html&gt;`.
+- `shortcutMap` Record&lt;string, string&gt;: map combos to identifiers; emits `shortcut`.
+- `ariaLabels` Record&lt;string, string&gt;: reserved bag for parity.
+- `trapFocus` boolean: trap focus within slotted content.
+- `returnFocus` boolean: restore last active element when trap ends.
+
+## Events
+- `shortcut` → `&#123; combo: string &#125;` when a configured shortcut is triggered.
+
+## Slots
+- default: content to render inside the helper container.
+
+</div>

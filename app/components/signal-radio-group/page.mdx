@@ -1,0 +1,32 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-radio-group'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-radio-group
+
+<LiveExample tag="signal-radio-group" />
+
+Radio group for selecting one option.
+
+## Usage
+```html
+<signal-radio-group .options=${[{ label: 'A', value: 'a' }, { label: 'B', value: 'b' }]} value="a"></signal-radio-group>
+```
+
+## Props
+- `options` Array&lt;&#123; label: string; value: string &#125;&gt;
+- `value` string | undefined
+- `name` string
+- `disabled` boolean
+
+## Events
+- `valueChange` → `&#123; value: string | undefined &#125;`
+
+## Slots
+- default: custom option rendering (optional)
+
+</div>

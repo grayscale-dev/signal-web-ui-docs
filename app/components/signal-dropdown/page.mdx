@@ -1,0 +1,44 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-dropdown'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-dropdown
+
+<LiveExample tag="signal-dropdown" />
+
+Accessible menu with keyboard navigation and selection events.
+
+```html
+<signal-dropdown
+  label="Actions"
+  align="right"
+  .items=${[
+    { key: 'edit', label: 'Edit' },
+    { key: 'archive', label: 'Archive' },
+    { key: 'delete', label: 'Delete', danger: true }
+  ]}
+></signal-dropdown>
+```
+
+## Props
+- `open` boolean (two-way via `openChange`).
+- `items` DropdownItem[] (`key`, `label`, optional `shortcut`, `disabled`, `danger`).
+- `label` string: default trigger text.
+- `align` "left" | "right".
+- `closeOnSelect` boolean: default true.
+
+## Events
+- `openChange` → `&#123; open: boolean &#125;`.
+- `itemSelect` → `&#123; key: string &#125;`.
+
+## Slots
+- `trigger`: custom trigger element. Menu content is generated from `items`.
+
+## Accessibility
+- `role="menu"`, arrow keys to move, Enter to select, Escape to close.
+
+</div>

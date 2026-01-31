@@ -1,0 +1,23 @@
+export const metadata = {
+  title: 'CDN Usage'
+};
+
+<div className="prose-signal space-y-6">
+
+# CDN usage
+
+Use the CDN when you want to prototype quickly or load components without a bundler. Provide both module and nomodule builds for compatibility.
+
+```html
+<script type="module" src="https://cdn.example.com/signal-web-ui/core.esm.js"></script>
+<script nomodule src="https://cdn.example.com/signal-web-ui/core.js"></script>
+```
+
+## Recommended pattern
+
+- `type="module"` for evergreen browsers.
+- `nomodule` for legacy environments.
+
+Update the URLs to match the hosting location for `@signal-web-ui/core`.
+
+</div>

@@ -1,0 +1,31 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-list-item'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-list-item
+
+<LiveExample tag="signal-list-item" />
+
+List row with title/subtitle and slots.
+
+## Props
+
+- `heading?: string` (attribute: `title`)
+- `subtitle?: string`
+- `href?: string`
+- `selected?: boolean`
+- `disabled?: boolean`
+
+## Events
+
+- `itemClick` — `&#123;&#125;` when clicked (ignored if disabled)
+
+## Slots
+
+- `left`, `title`, `subtitle`, `right`
+
+</div>

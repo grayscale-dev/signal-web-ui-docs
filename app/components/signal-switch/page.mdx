@@ -1,0 +1,33 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-switch'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-switch
+
+<LiveExample tag="signal-switch" />
+
+Toggle switch with optional label and control id.
+
+## Usage
+```html
+<signal-switch label="Enable feature" checked></signal-switch>
+```
+
+## Props
+- `label` string
+- `checked` boolean
+- `disabled` boolean
+- `loading` boolean
+- `controlId` string
+
+## Events
+- `valueChange` → `&#123; checked: boolean &#125;`
+
+## Slots
+- default: custom label content (optional)
+
+</div>

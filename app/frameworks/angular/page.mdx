@@ -1,0 +1,29 @@
+export const metadata = {
+  title: 'Angular Wrapper'
+};
+
+<div className="prose-signal space-y-6">
+
+# Angular wrapper
+
+The Angular wrapper offers directives and components that align with Angular templates.
+
+```ts
+import { SignalWebUiModule } from '@signal-web-ui/angular';
+
+@NgModule({
+  imports: [SignalWebUiModule]
+})
+export class AppModule {}
+```
+
+```html
+<signal-data-table></signal-data-table>
+```
+
+## Notes
+
+- Add the module to your feature module or app module.
+- Run the loader in your main entry before bootstrap.
+
+</div>

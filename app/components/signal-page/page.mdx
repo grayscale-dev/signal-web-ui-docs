@@ -1,0 +1,36 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-page'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-page
+
+<LiveExample tag="signal-page" />
+
+Page scaffold for loading/empty/error states.
+
+## Usage
+```html
+<signal-page heading="Dashboard" loading>
+  <p>Content once loaded.</p>
+</signal-page>
+```
+
+## Props
+- `heading` string
+- `description` string
+- `loading` boolean
+- `empty` boolean
+- `error` boolean
+
+## Events
+None.
+
+## Slots
+- default: page content.
+- `empty`, `error`, `loading` (if supported for custom states).
+
+</div>

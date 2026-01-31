@@ -1,0 +1,38 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-data-table'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-data-table
+
+<LiveExample tag="signal-data-table" />
+
+Lightweight data table for read-only datasets.
+
+## Props
+
+- `columns: &#123; key: string; header: string; align?: "left" | "center" | "right"; render?: (row) =&gt; any &#125;[]`
+- `rows: Record&lt;string, unknown&gt;[]`
+- `caption?: string`
+- `emptyText?: string = "No results"`
+- `getRowId?: (row, index) =&gt; string | number`
+
+## Events
+
+- `rowClick` — detail: `&#123; row &#125;`
+
+## Slots
+
+- `header-&#123;key&#125;` — override a column header
+- `cell-&#123;key&#125;` — override a cell for a column
+- `empty` — custom empty state
+
+## Notes for wrappers
+
+- React/Vue/Angular wrappers pass functions for `render` and `getRowId` as properties.
+- In plain HTML, prefer slots for custom cell or header content.
+
+</div>

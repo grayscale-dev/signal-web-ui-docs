@@ -1,0 +1,26 @@
+export const metadata = {
+  title: 'Vue Wrapper'
+};
+
+<div className="prose-signal space-y-6">
+
+# Vue wrapper
+
+`@signal-web-ui/vue` provides Vue components that wrap the underlying custom elements.
+
+```vue
+<script setup>
+import { SignalButton } from '@signal-web-ui/vue';
+</script>
+
+<template>
+  <SignalButton variant="primary">Deploy</SignalButton>
+</template>
+```
+
+## Notes
+
+- Register the custom elements in your app entry.
+- Use v-model bindings where the wrapper exposes them.
+
+</div>

@@ -1,0 +1,65 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-combobox'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-combobox
+
+<LiveExample tag="signal-combobox" />
+
+A single or multi-select combobox with optional search, clear, and create behaviors.
+
+## Usage
+
+```html
+<signal-combobox id="team"></signal-combobox>
+<script type="module">
+  const combo = document.querySelector('#team');
+  combo.options = [
+    { value: 'alpha', label: 'Alpha' },
+    { value: 'beta', label: 'Beta' }
+  ];
+</script>
+```
+
+## Props
+
+- `options`: `ComboboxOption[]` (default: `[]`)
+- `value`: `string | string[] | null` (optional, mutable)
+- `defaultValue`: `string | string[] | null` (optional)
+- `mode`: `"single" | "multi"` (default: `"single"`)
+- `placeholder`: `string` (default: `"Select"`)
+- `disabled`: `boolean` (default: `false`)
+- `loading`: `boolean` (default: `false`)
+- `clearable`: `boolean` (default: `false`)
+- `searchable`: `boolean` (default: `true`)
+- `creatable`: `boolean` (default: `false`)
+- `maxSelected`: `number` (optional)
+- `closeOnSelect`: `boolean` (optional)
+
+### ComboboxOption
+
+```ts
+{ value: string; label: string; disabled?: boolean; group?: string; }
+```
+
+## Events
+
+- `valueChange`: `&#123; value: string | string[] | null &#125;`
+- `openChange`: `&#123; open: boolean &#125;`
+- `queryChange`: `&#123; query: string &#125;`
+- `clear`: `void`
+
+## CSS Parts
+
+- `container`, `control`, `trigger`, `value`, `caret`, `input`, `clear`, `listbox`, `option`, `option-selected`, `option-create`, `empty`
+
+## Notes
+
+- In `multi` mode, selection emits an array of values.
+- `closeOnSelect` defaults to `true` for single-select and `false` for multi-select.
+
+</div>

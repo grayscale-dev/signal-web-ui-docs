@@ -1,0 +1,31 @@
+export const metadata = {
+  title: 'Installation'
+};
+
+<div className="prose-signal space-y-6">
+
+# Installation
+
+Install the core package plus the wrapper that matches your framework. The core package contains the custom elements; wrappers simply provide framework bindings.
+
+```bash
+npm install @signal-web-ui/core
+npm install @signal-web-ui/react
+```
+
+## Package matrix
+
+| Package | Purpose |
+| --- | --- |
+| `@signal-web-ui/core` | Custom elements and styles. |
+| `@signal-web-ui/react` | React bindings. |
+| `@signal-web-ui/vue` | Vue bindings. |
+| `@signal-web-ui/angular` | Angular bindings. |
+| `@signal-web-ui/ember` | Ember bindings. |
+
+## Notes
+
+- Keep wrapper versions aligned with the core package.
+- If you use multiple frameworks, share a single core installation.
+
+</div>

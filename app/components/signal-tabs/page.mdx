@@ -1,0 +1,56 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-tabs'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-tabs
+
+<LiveExample tag="signal-tabs" />
+
+Tabs/steps component with validation states and lazy rendering.
+
+## Usage
+
+```html
+<signal-tabs id="tabs" value="one"></signal-tabs>
+<script type="module">
+  const tabs = document.querySelector('#tabs');
+  tabs.tabs = [
+    { key: 'one', label: 'One' },
+    { key: 'two', label: 'Two' }
+  ];
+</script>
+```
+
+## Props
+
+- `tabs` array of tab configs
+- `value` / `activeKey` string
+- `variant` string (e.g., "underline", "pill")
+- `orientation` "horizontal" | "vertical"
+- `keepAlive` boolean
+- `lazy` boolean
+- `validationMap` record of validation states
+
+```ts
+type TabConfig = {
+  key: string;
+  label: string;
+  disabled?: boolean;
+  badge?: string;
+  status?: string;
+};
+
+type ValidationMap = Record<string, string | boolean>;
+```
+
+## Events
+- `valueChange` → `&#123; value: string &#125;`
+
+## Slots
+- default: tab panels slotted by `slot="panel-&#123;key&#125;"` (if supported by implementation).
+
+</div>

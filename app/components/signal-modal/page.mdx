@@ -1,0 +1,61 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-modal'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-modal
+
+<LiveExample tag="signal-modal" />
+
+A dialog/modal component with optional drag, resize, and confirm actions.
+
+## Usage
+
+```html
+<signal-modal id="modal" heading="Details" open></signal-modal>
+```
+
+## Props
+
+- `open`: `boolean` (default: `false`, mutable, reflected)
+- `heading`: `string` (optional)
+- `description`: `string` (optional)
+- `size`: `"sm" | "md" | "lg"` (default: `"md"`)
+- `closeOnBackdrop`: `boolean` (default: `true`)
+- `closeOnEsc`: `boolean` (default: `true`)
+- `dragEnabled`: `boolean` (default: `false`)
+- `resizable`: `boolean` (default: `false`)
+- `fullscreen`: `boolean` (default: `false`)
+- `showHeaderControls`: `boolean` (default: `true`)
+- `showConfirm`: `boolean` (default: `false`)
+- `confirmText`: `string` (default: `"Confirm"`)
+- `defaultSize`: `&#123; width: number; height: number &#125;` (optional)
+- `minSize`: `&#123; width: number; height: number &#125;` (optional)
+- `maxSize`: `&#123; width: number; height: number &#125;` (optional)
+- `defaultPosition`: `&#123; x: number; y: number &#125;` (optional)
+
+## Events
+
+- `openChange`: `&#123; open: boolean &#125;`
+- `close`: `void`
+- `confirm`: `void`
+
+## Slots
+
+- default: modal body
+- `header`: custom header content (replaces default header)
+- `footer`: footer content
+
+## CSS Parts
+
+- `overlay`, `backdrop`, `dialog`, `header`, `body`, `footer`, `resize-handle`
+
+## Notes
+
+- When `open` becomes `true`, the component traps focus and disables document body scrolling.
+- When `dragEnabled` is true, the header becomes draggable (except buttons in the header).
+
+</div>

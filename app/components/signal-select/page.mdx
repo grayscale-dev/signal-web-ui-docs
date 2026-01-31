@@ -1,0 +1,32 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-select'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-select
+
+<LiveExample tag="signal-select" />
+
+Select input for single value choice.
+
+## Usage
+```html
+<signal-select .options=${[{ label: 'One', value: '1' }]} value="1"></signal-select>
+```
+
+## Props
+- `options` Array&lt;&#123; label: string; value: string &#125;&gt;
+- `value` string | undefined
+- `placeholder` string
+- `disabled` boolean
+
+## Events
+- `valueChange` → `&#123; value: string | undefined &#125;`
+
+## Slots
+- default: custom option rendering (optional)
+
+</div>

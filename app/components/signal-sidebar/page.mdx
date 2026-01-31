@@ -1,0 +1,35 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-sidebar'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-sidebar
+
+<LiveExample tag="signal-sidebar" />
+
+Navigation sidebar with collapsible groups and search support.
+
+## Usage
+```html
+<signal-sidebar .items=${[{ id: 'home', label: 'Home' }]}></signal-sidebar>
+```
+
+## Props
+- `items` array of nav items (id, label, children?, icon?)
+- `heading` string
+- `searchable` boolean
+- `collapsible` boolean
+- `defaultCollapsed` boolean
+- `activeItem` string
+
+## Events
+- `navigate` → `&#123; id: string &#125;`
+- `toggle` → `&#123; collapsed: boolean &#125;`
+
+## Slots
+- default: custom header/footer via named slots if implemented in component.
+
+</div>

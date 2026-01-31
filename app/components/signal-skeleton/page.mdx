@@ -1,0 +1,27 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-skeleton'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-skeleton
+
+<LiveExample tag="signal-skeleton" />
+
+Skeleton/placeholder and empty/error panel.
+
+## Props
+
+- `variant?: "skeleton" | "empty" | "error"` (default `"skeleton"`)
+- `lines?: number` (default `3`)
+- `media?: boolean`
+- `heading?: string` (attribute: `title`)
+- `description?: string`
+
+## Slots
+
+- `title`, `description`, `actions` (for empty/error)
+
+</div>

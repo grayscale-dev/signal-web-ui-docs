@@ -1,0 +1,33 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-split-view'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-split-view
+
+<LiveExample tag="signal-split-view" />
+
+Resizable split panes for layouts.
+
+## Usage
+```html
+<signal-split-view .panes=${[{ id: 'a', content: 'Left' }, { id: 'b', content: 'Right' }]}></signal-split-view>
+```
+
+## Props
+- `panes` array of pane configs
+- `orientation` "horizontal" | "vertical"
+- `defaultSizes` number[]
+- `minSizes` number[]
+- `collapsible` boolean
+
+## Events
+- `sizesChange` → `&#123; sizes: number[] &#125;`
+
+## Slots
+- default: pane content if provided via slots instead of props.
+
+</div>

@@ -1,0 +1,94 @@
+'use client';
+
+import { useEffect } from 'react';
+import { defineCustomElement as defineSignalAccessibilityHelpers } from '@signal-web-ui/core/dist/custom-elements/signal-accessibility-helpers';
+import { defineCustomElement as defineSignalAppShell } from '@signal-web-ui/core/dist/custom-elements/signal-app-shell';
+import { defineCustomElement as defineSignalBadge } from '@signal-web-ui/core/dist/custom-elements/signal-badge';
+import { defineCustomElement as defineSignalBehavioralPrimitives } from '@signal-web-ui/core/dist/custom-elements/signal-behavioral-primitives';
+import { defineCustomElement as defineSignalBreadcrumbs } from '@signal-web-ui/core/dist/custom-elements/signal-breadcrumbs';
+import { defineCustomElement as defineSignalButton } from '@signal-web-ui/core/dist/custom-elements/signal-button';
+import { defineCustomElement as defineSignalCard } from '@signal-web-ui/core/dist/custom-elements/signal-card';
+import { defineCustomElement as defineSignalCheckbox } from '@signal-web-ui/core/dist/custom-elements/signal-checkbox';
+import { defineCustomElement as defineSignalCombobox } from '@signal-web-ui/core/dist/custom-elements/signal-combobox';
+import { defineCustomElement as defineSignalDataTable } from '@signal-web-ui/core/dist/custom-elements/signal-data-table';
+import { defineCustomElement as defineSignalDrawer } from '@signal-web-ui/core/dist/custom-elements/signal-drawer';
+import { defineCustomElement as defineSignalDropdown } from '@signal-web-ui/core/dist/custom-elements/signal-dropdown';
+import { defineCustomElement as defineSignalFeatureTable } from '@signal-web-ui/core/dist/custom-elements/signal-feature-table';
+import { defineCustomElement as defineSignalFileUpload } from '@signal-web-ui/core/dist/custom-elements/signal-file-upload';
+import { defineCustomElement as defineSignalHeading } from '@signal-web-ui/core/dist/custom-elements/signal-heading';
+import { defineCustomElement as defineSignalInput } from '@signal-web-ui/core/dist/custom-elements/signal-input';
+import { defineCustomElement as defineSignalLayout } from '@signal-web-ui/core/dist/custom-elements/signal-layout';
+import { defineCustomElement as defineSignalListItem } from '@signal-web-ui/core/dist/custom-elements/signal-list-item';
+import { defineCustomElement as defineSignalModal } from '@signal-web-ui/core/dist/custom-elements/signal-modal';
+import { defineCustomElement as defineSignalNavbar } from '@signal-web-ui/core/dist/custom-elements/signal-navbar';
+import { defineCustomElement as defineSignalPage } from '@signal-web-ui/core/dist/custom-elements/signal-page';
+import { defineCustomElement as defineSignalPopover } from '@signal-web-ui/core/dist/custom-elements/signal-popover';
+import { defineCustomElement as defineSignalProgress } from '@signal-web-ui/core/dist/custom-elements/signal-progress';
+import { defineCustomElement as defineSignalRadioGroup } from '@signal-web-ui/core/dist/custom-elements/signal-radio-group';
+import { defineCustomElement as defineSignalResponsiveConfig } from '@signal-web-ui/core/dist/custom-elements/signal-responsive-config';
+import { defineCustomElement as defineSignalSection } from '@signal-web-ui/core/dist/custom-elements/signal-section';
+import { defineCustomElement as defineSignalSelect } from '@signal-web-ui/core/dist/custom-elements/signal-select';
+import { defineCustomElement as defineSignalSidebar } from '@signal-web-ui/core/dist/custom-elements/signal-sidebar';
+import { defineCustomElement as defineSignalSkeleton } from '@signal-web-ui/core/dist/custom-elements/signal-skeleton';
+import { defineCustomElement as defineSignalSlider } from '@signal-web-ui/core/dist/custom-elements/signal-slider';
+import { defineCustomElement as defineSignalSnackbar } from '@signal-web-ui/core/dist/custom-elements/signal-snackbar';
+import { defineCustomElement as defineSignalSplitView } from '@signal-web-ui/core/dist/custom-elements/signal-split-view';
+import { defineCustomElement as defineSignalSwitch } from '@signal-web-ui/core/dist/custom-elements/signal-switch';
+import { defineCustomElement as defineSignalTable } from '@signal-web-ui/core/dist/custom-elements/signal-table';
+import { defineCustomElement as defineSignalTabs } from '@signal-web-ui/core/dist/custom-elements/signal-tabs';
+import { defineCustomElement as defineSignalTag } from '@signal-web-ui/core/dist/custom-elements/signal-tag';
+import { defineCustomElement as defineSignalText } from '@signal-web-ui/core/dist/custom-elements/signal-text';
+import { defineCustomElement as defineSignalTextarea } from '@signal-web-ui/core/dist/custom-elements/signal-textarea';
+import { defineCustomElement as defineSignalToast } from '@signal-web-ui/core/dist/custom-elements/signal-toast';
+import { defineCustomElement as defineSignalTooltip } from '@signal-web-ui/core/dist/custom-elements/signal-tooltip';
+
+const defineAll = () => {{
+  defineSignalAccessibilityHelpers();
+  defineSignalAppShell();
+  defineSignalBadge();
+  defineSignalBehavioralPrimitives();
+  defineSignalBreadcrumbs();
+  defineSignalButton();
+  defineSignalCard();
+  defineSignalCheckbox();
+  defineSignalCombobox();
+  defineSignalDataTable();
+  defineSignalDrawer();
+  defineSignalDropdown();
+  defineSignalFeatureTable();
+  defineSignalFileUpload();
+  defineSignalHeading();
+  defineSignalInput();
+  defineSignalLayout();
+  defineSignalListItem();
+  defineSignalModal();
+  defineSignalNavbar();
+  defineSignalPage();
+  defineSignalPopover();
+  defineSignalProgress();
+  defineSignalRadioGroup();
+  defineSignalResponsiveConfig();
+  defineSignalSection();
+  defineSignalSelect();
+  defineSignalSidebar();
+  defineSignalSkeleton();
+  defineSignalSlider();
+  defineSignalSnackbar();
+  defineSignalSplitView();
+  defineSignalSwitch();
+  defineSignalTable();
+  defineSignalTabs();
+  defineSignalTag();
+  defineSignalText();
+  defineSignalTextarea();
+  defineSignalToast();
+  defineSignalTooltip();
+}};
+
+export default function CustomElementsLoader() {{
+  useEffect(() => {{
+    defineAll();
+  }}, []);
+
+  return null;
+}}

@@ -1,0 +1,48 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-button'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-button
+
+<LiveExample tag="signal-button" />
+
+A styled button component with variants, sizes, and optional icon slots. Renders a native `&lt;button&gt;` element in Shadow DOM.
+
+## Usage
+
+```html
+<signal-button variant="primary" size="md">Submit</signal-button>
+```
+
+## Props
+
+- `variant`: `"primary" | "secondary" | "ghost" | "subtle" | "danger"` (default: `"primary"`)
+- `size`: `"sm" | "md" | "lg"` (default: `"md"`)
+- `loading`: `boolean` (default: `false`) — disables the button and shows a spinner
+- `disabled`: `boolean` (default: `false`)
+- `type`: `"button" | "submit" | "reset"` (default: `"button"`)
+
+## Events
+
+- Native `click` event from the internal `&lt;button&gt;` element.
+
+## Slots
+
+- default: button label
+- `icon-left`: optional leading icon
+- `icon-right`: optional trailing icon
+
+## CSS Parts
+
+- `button`, `label`, `icon-left`, `icon-right`, `spinner`
+
+## Notes
+
+- `loading` sets `aria-busy="true"` and disables the button.
+- Icons are hidden unless content is provided in the corresponding slot.
+
+</div>

@@ -1,0 +1,21 @@
+export const metadata = {
+  title: 'Loader Usage'
+};
+
+<div className="prose-signal space-y-6">
+
+# Loader usage
+
+When bundling custom elements, initialize the loader before using components. Some builds provide `applyPolyfills` for legacy browsers and `defineCustomElements` to register the elements.
+
+```ts
+import { defineCustomElements, applyPolyfills } from '@signal-web-ui/core/loader';
+
+applyPolyfills?.().then(() => {
+  defineCustomElements();
+});
+```
+
+If your build does not include `applyPolyfills`, you can call `defineCustomElements()` directly.
+
+</div>

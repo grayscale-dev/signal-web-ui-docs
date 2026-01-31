@@ -1,0 +1,31 @@
+import LiveExample from '@/ui/demos/LiveExample';
+
+export const metadata = {
+  title: 'signal-tag'
+};
+
+<div className="prose-signal space-y-6">
+
+# signal-tag
+
+<LiveExample tag="signal-tag" />
+
+Tag/pill with optional remove action.
+
+## Props
+
+- `label: string`
+- `tone?: "neutral" | "accent" | "success" | "warning" | "danger"` (default `"neutral"`)
+- `size?: "sm" | "md" | "lg"` (default `"md"`)
+- `removable?: boolean`
+- `disabled?: boolean`
+
+## Events
+
+- `remove` — fires when the remove control is clicked
+
+## Slots
+
+- `icon`, default label
+
+</div>
